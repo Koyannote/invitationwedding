@@ -6,16 +6,17 @@ public class  Description{
 
 
 
-    private CategoryMade categoryMade;
-    private List<Integer> price;
+    public CategoryMade categoryMade;
+    public int maxprice;
+    public int minprice;
 
-    public Description() {
+    public Description(CategoryMade categoryMade, int maxprice, int minprice) {
+        this.categoryMade = categoryMade;
+        this.maxprice = maxprice;
+        this.minprice = minprice;
     }
 
-    public Description(CategoryMade categoryMade, List<Integer> price) {
-        this.categoryMade = categoryMade;
-        this.price = price;
-
+    public Description() {
     }
 
     public CategoryMade getCategoryMade() {
@@ -26,21 +27,27 @@ public class  Description{
         this.categoryMade = categoryMade;
     }
 
-
-
-    public List<Integer> getPrice() {
-        return price;
+    public int getMaxprice() {
+        return maxprice;
     }
 
-    public void setPrice(List<Integer> price) {
-        this.price = price;
+    public void setMaxprice(int maxprice) {
+        this.maxprice = maxprice;
+    }
+
+    public int getMinprice() {
+        return minprice;
+    }
+
+    public void setMinprice(int minprice) {
+        this.minprice = minprice;
     }
 
     @Override
     public String toString() {
-        return "" +
-                "CategoryMade=" + categoryMade +
-                ", price=" + price
-                ;
+        return
+                "categoryMade=" + categoryMade +
+                ", maxprice=" + maxprice +
+                ", minprice=" + minprice ;
     }
 }

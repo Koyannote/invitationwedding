@@ -26,20 +26,22 @@
         <th>Address</th>
         <th>Phone</th>
         <th>Description</th>
-        <th>Descirption Price</th>
+        <th>Ready Made</th>
+        <th>Hand Made</th>
         <th>Quantity</th>
         <th>TotalPrice</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="inv:${invitations}">
-        <td><small th:text="*{inv.getName()}"></small></td>
-        <td><small th:text="*{inv.getAddress()}"></small></td>
-        <td><small th:text="*{inv.getPhone()}"></small></td>
-        <td><small th:text="*{inv.getDdescription()}"></small></td>
-        <td><small th:text="*{inv.getDecriptionprice()}"></small></td>
-        <td><small th:text="*{inv.getDquantity()}"></small></td>
-        <td><small th:text="*{inv.getTotalprice()}"></small></td>
+    <tr th:each="ine: ${invitations}">
+        <td><small th:text="*{ine.getName()}"></small></td>
+        <td><small th:text="*{ine.getAddress()}"></small></td>
+        <td><small th:text="*{ine.getPhone()}"></small></td>
+        <td><small th:text="*{ine.getDdescription()}"></small></td>
+        <td><small th:text="*{ine.getDecriptionprice()}"></small></td>
+        <td><small th:text="*{ine.getDescriptionprice2()}"></small></td>
+        <td><small th:text="*{ine.getDquantity()}"></small></td>
+        <td><small th:text="*{ine.getTotalprice()}"></small></td>
     </tr>
 
     </tbody>
