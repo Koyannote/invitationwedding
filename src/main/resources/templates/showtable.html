@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+<style>
+
+    body{
+        background-color: #cdd8e1;
+    }
+
+</style>
+
+
+</head>
+<body>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Description</th>
+        <th>Descirption Price</th>
+        <th>Quantity</th>
+        <th>TotalPrice</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="inv:${invitations}">
+        <td><small th:text="*{inv.getName()}"></small></td>
+        <td><small th:text="*{inv.getAddress()}"></small></td>
+        <td><small th:text="*{inv.getPhone()}"></small></td>
+        <td><small th:text="*{inv.getDdescription()}"></small></td>
+        <td><small th:text="*{inv.getDecriptionprice()}"></small></td>
+        <td><small th:text="*{inv.getDquantity()}"></small></td>
+        <td><small th:text="*{inv.getTotalprice()}"></small></td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+</body>
+</html>
